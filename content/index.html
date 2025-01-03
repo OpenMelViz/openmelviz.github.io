@@ -1,0 +1,57 @@
+---
+title: MelViz
+description: MelViz Core is a Web application that can render Dashboards in YAML format.
+name: MelViz
+simple-name: MelViz
+image: melviz.png
+social-twitter:
+social-facebook:
+social-github: OpenMelViz
+social-linkedin:
+layout: :theme/page
+max-blog: 1
+---
+
+<h1>Easy dashboards and data storytelling with MelViz!</h1>
+<hr>
+<p>A fast, easy-to-use, cloud-native and open source data visualization tool for software developers</p>
+
+<div class="video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3u-2qVlm48c?si=kA21AdDn0nCJ38fJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<h2>Create dashboards your way</h2>
+<hr>
+<p>MelViz supports dashboards created from YML or with a drag and drop tool. You can make use of internal visual components or build your own.</p>
+
+<h3>YML</h3>
+<p>Author dashboards in a browser client-side editor using YML language. Export a client-only application to use anywhere or keep it stored in the cloud. See [MelViz YAML Guide](/docs/melviz-yaml-guide)</p>
+<img src="{page.image('index/MV-YML.png')}" />
+
+<h3>Visual Components</h3>
+<p>MelViz comes with a full set of traditional visual components, but developers can extend the components library by building their own.</p>
+<img src="{page.image('index/MV-KITCHENSINK.png')}" />
+
+<h3>Quarkus Extension</h3>
+<p>Bring dashboards to your Quarkus application by using the MelViz extension.</p>
+<img src="{page.image('index/MV-QUARKUS.png')}" />
+
+<h2>Blogs</h2>
+<hr>
+{#if site.collections.get('posts')}
+{#for post in site.collections.get('posts').randomise.take(1)}
+<article class="post">
+  {#if post.image}
+  <a class="post-thumbnail" style="background-image: url({post.image})" href="{post.url}"></a>
+  {/if}
+  <div class="post-content">
+    <h2 class="post-title"><a href="{post.url}">{post.title}</a></h2>
+    <p>{post.description}</p>
+    <span class="post-date">{post.date.format('yyyy, MMM dd')}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+    <span class="post-words">
+      {post.readTime} minute(s) read
+    </span>
+  </div>
+</article>
+{/for}
+{/if}

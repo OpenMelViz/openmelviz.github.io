@@ -1,0 +1,14 @@
+---
+title: What is MelViz?
+layout: doc
+---
+
+{#include partials/doc/doc-attributes.adoc/}
+
+= {page.title}
+
+== Welcome
+
+MelViz is a tool for creating dashboards and data visualizations for developers and non-technical users. Dashboards can be created using pure `YAML` or you can reuse some of the existing dashboards to monitor your service or application.
+
+image::dashbuilderSampleDashboard.png[dashbuilderSampleDashboard]

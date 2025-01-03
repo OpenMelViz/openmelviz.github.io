@@ -1,0 +1,16 @@
+william:
+  name: "William Antônio Siqueira"
+  job: Senior Software Engineer
+  nickname: jesuino
+  profile: "https://github.com/jesuino"
+  avatar: "https://avatars.githubusercontent.com/u/359820?v=4?raw=true"
+  bio: |
+    JUG Vale co-leader, Open Data activist, Senior Software Engineer at Red Hat working with Red Hat Developer Hub.
+pedro-hos:
+  name: "Pedro Hos"
+  job: Senior Software Engineer
+  nickname: pedro-hos
+  profile: "https://github.com/pedro-hos"
+  avatar: "https://github.com/pedro-hos/blog/blob/main/static/assets/images/pedrohos.jpg?raw=true"
+  bio: |
+    I'm Pedro Hos a passionate software developer with over 10 years of experience working with Java. Currently, I am a Senior Software Engineer at Red Hat, working on the Application Runtime Sustaining team (Wildfly, Quarkus, Keycloak). I lead the JUG Vale community and advocate for open data and open-source initiatives. I enjoy mountain biking, writing, cooking and hiking in my free time.

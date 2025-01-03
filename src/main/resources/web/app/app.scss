@@ -1,0 +1,20 @@
+.giscus {
+    padding: 10px;
+  }
+    
+  // Responsive design
+  @media (max-width: 768px) {
+    .event {
+      padding: 15px;
+    }
+  
+    .event-content {
+      .event-title {
+        font-size: 1.3rem;
+      }
+  
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
