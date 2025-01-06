@@ -1,0 +1,11 @@
+items:
+  - title: "Blog"
+    path: "/blog"
+    icon: "fa-regular fa-newspaper"
+  - title: "Documentation"
+    path: "/docs"
+    icon: "fa-solid fa-book"
+    # target: "_blank"
+  - title: "About"
+    path: "/about"
+    icon: "fa fa-thumbs-up"
