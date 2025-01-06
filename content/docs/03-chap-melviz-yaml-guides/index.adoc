@@ -1009,7 +1009,7 @@ _Figure 17. Meter_
 
 NOTE: Map is disabled for ECharts renderer and may be available in later versions.
 
-Dashbuilder provides a Map component to show geographic data. It is country based, so to use it one must provide the country identification, which could be the country name, `lat`, `long` or the country code, and provide the value for that country. It has two types: 
+Melviz provides a Map component to show geographic data. It is country based, so to use it one must provide the country identification, which could be the country name, `lat`, `long` or the country code, and provide the value for that country. It has two types: 
 
 - `MAP_MARKERS`: which marks the country with bubbles according to the value 
 - ` MAP_REGIONS`: which paints the map according to the value. 
@@ -1067,7 +1067,7 @@ _Figure 18. Map_
 
 == External Components
 
-Dashbuilder also support components built externally. Components have an ID and you can either add its assets to Dashbuilder server under context `/dashbuilder/component/\{componentId}/` or use a property to point to a remote component:
+Melviz also support components built externally. Components have an ID and you can either add its assets to Melviz server under context `/melviz/component/\{componentId}/` or use a property to point to a remote component:
 
 [source, yaml]
 ----
@@ -1103,31 +1103,7 @@ pages:
             uuid: products
 ----
 
-Some components are provided for use with Dashbuilder. Check the documentation for each component to understand how to use it:
-
-- **table:** The table external component has a different look and feel and can be used with any dataset.
-
-[source, yaml]
-----
-datasets:
-  - uuid: products
-    content: >-
-      [
-        ["Computers", "Scanner", 5, 3],
-        ["Computers", "Printer", 7, 4],
-        ["Computers", "Laptop", 3, 2],
-        ["Electronics", "Camera", 10, 7],
-        ["Electronics", "Headphones", 5, 9]
-      ]
-pages:
-  - components:
-      - displayer:
-          component: table
-          external:
-            width: 100%
-          lookup:
-            uuid: products
-----
+Some components are provided for use with Melviz. Check the documentation for each component to understand how to use it:
 
 - **echarts:** ECharts chart. In this component the dataset is transformed to an echarts dataset and the option parameter can be used to provide a JSON object to configure the echart. We also parse the options in YML format to JSON, so some configuration could be done using pure YML. Here’s a sample echart usage:
 
@@ -1225,22 +1201,7 @@ pages:
           external:
             width: 100%
           svg-heatmap:
-            size: "3"
-            blur: "0.9"
-            svg: >-
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <path id="svg_1" d="m23,23l82,0l0,51l-82,0l0,-51z" stroke-width="0" fill="#999999"/>
-                <path id="svg_2" d="m133,23l82,0l0,51l-82,0l0,-51z" stroke-width="0" fill="#999999"/>
-                <path id="svg_3" d="m240,23l82,0l0,51l-82,0l0,-51z" stroke-width="0" fill="#999999"/>
-                <path id="svg_4" d="m350,23l82,0l0,51l-82,0l0,-51z" stroke-width="0" fill="#999999"/>
-                <path id="svg_5" d="m461,24l82,0l0,51l-82,0l0,-51z" stroke-width="0" fill="#999999"/>
-                <path id="svg_6" d="m566,26l82,0l0,51l-82,0l0,-51z" stroke-width="0" fill="#999999"/>
-              </svg>
-          lookup:
-            uuid: svg-data
-----
-
-- **uniforms:** Uniforms is a component that does not use a dataset, but allow users to render forms to post data to a URL. It accepts the parameters `uniforms.url`, the form URL and the JSON schema for the form generation, `uniforms.schema`.
+            size: "3"- **uniforms:** Uniforms is a component that does not use a dataset, but allow users to render forms to post data to a URL. It accepts the parameters `uniforms.url`, the form URL and the JSON schema for the form generation, `uniforms.schema`.
 
 [source, yaml]
 ----
@@ -1277,6 +1238,21 @@ pages:
                }
             }
 ----
+            blur: "0.9"
+            svg: >-
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <path id="svg_1" d="m23,23l82,0l0,51l-82,0l0,-51z" stroke-width="0" fill="#999999"/>
+                <path id="svg_2" d="m133,23l82,0l0,51l-82,0l0,-51z" stroke-width="0" fill="#999999"/>
+                <path id="svg_3" d="m240,23l82,0l0,51l-82,0l0,-51z" stroke-width="0" fill="#999999"/>
+                <path id="svg_4" d="m350,23l82,0l0,51l-82,0l0,-51z" stroke-width="0" fill="#999999"/>
+                <path id="svg_5" d="m461,24l82,0l0,51l-82,0l0,-51z" stroke-width="0" fill="#999999"/>
+                <path id="svg_6" d="m566,26l82,0l0,51l-82,0l0,-51z" stroke-width="0" fill="#999999"/>
+              </svg>
+          lookup:
+            uuid: svg-data
+----
+
+
 
 - **map:** Map is a component to show geographic information. It is based on react-simple-map library and accepts different configuration related to the map aspect. The dataset can be the geo name/some key for the geo and a value or three number columns with the latitute, longitude and the value. It can show the data in bubbles or fill the matched geo.
 
@@ -1380,11 +1356,11 @@ navTree:
 
 Navigation is an optional component and it is about the relationship between pages. When you have more than one page then a menu is displayed with all pages, you can organize this menu. Furthermore, navigation is the key for embedding pages inside each other.
 
-NOTE: To show a default page just name it as index and it will be displayed by default, otherwise the default Dashbuilder page will be displayed.
+NOTE: To show a default page just name it as index and it will be displayed by default, otherwise the default Melviz page will be displayed.
 
 == Navigation Components
 
-It is possible to embed pages using navigation groups. To do so Dashbuilder provides navigation components.
+It is possible to embed pages using navigation groups. To do so Melviz provides navigation components.
 
 - **TILES:** Displays the navigation group pages in tiles;
 - **CAROUSEL:** Displays the pages in a carousel;
